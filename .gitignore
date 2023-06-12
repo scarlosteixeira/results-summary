@@ -37,3 +37,5 @@ design
 
 
 .prettierignore
+# Local Netlify folder
+.netlify
