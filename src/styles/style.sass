@@ -1,0 +1,160 @@
+//Importing variables
+@import "_variables.sass"
+// Defining character encoding system
+@charset 'utf-8'
+//Defining font family 
+@font-face
+  font-family: $ff
+  src: url("../assets/fonts/static/HankenGrotesk-Medium.ttf") format("truetype")
+  font-weight: $fw-medium
+
+@font-face
+  font-family: $ff
+  src: url("../assets/fonts/static/HankenGrotesk-Bold.ttf") format("truetype")
+  font-weight: $fw-bold
+
+@font-face
+  font-family: $ff
+  src: url("../assets/fonts/static/HankenGrotesk-ExtraBold.ttf") format("truetype")
+  font-weight: $fw-exBold
+
+// CSS 
+*, *::before, *::after
+  margin: 0
+  padding: 0
+  outline: none
+  box-sizing: border-box
+
+body
+  font-size: $fs
+  font-family: $ff
+  font-weight: $fw-medium
+  background-color: $white
+  color: $dark-gray-blue
+  max-width: 1440px
+  min-width: 375px
+  margin: 0 auto
+
+#root
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+.result-wrapper
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  background-image: linear-gradient(to bottom, $light-slate-blue, $light-royal-blue)
+  border-radius: 0% 0% 10% 10%
+  width: 375px
+  margin: 0 auto
+  color: $light-lavender
+  h1
+    font-size: $fs
+    margin: 8% auto
+
+.score-wrapper
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  background-image: linear-gradient(to bottom, $violet-blue, $persian-blue)
+  aspect-ratio: 1/1
+  border-radius: 50%
+  width: 120px
+  margin-bottom: 8%
+  p:first-child
+    font-size: 3rem
+    font-weight: $fw-bold
+    margin-bottom: 3%
+    color: $white
+  p:last-child
+    font-size: 1rem
+    font-weight: $fw-medium
+    margin: 0 auto
+    color:$light-slate-blue
+
+.grade-wrapper
+  color: $white
+  font-size: 1.5rem
+  margin-bottom: 4%
+
+.description-wrapper
+  margin: 0 15%
+  margin-bottom: 10%
+  text-align: center
+  font-size: 1rem
+
+.detailed-wrapper
+  display: flex
+  flex-direction: column
+  width: 375px
+  padding: 2rem 2rem
+
+  h2
+    font-size: $fs
+    font-weight: $fw-bold
+    margin-bottom: 2rem
+  button
+    color: $white
+    background-color: $dark-gray-blue
+    padding: 1rem 2rem
+    border-radius: 30px
+    border: none
+  button:hover
+    background-image: linear-gradient(to bottom, $light-slate-blue, $light-royal-blue)
+    
+
+.detailed-score-wrapper
+  margin-left: 1rem
+
+.detailed-score-item-wrapper
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 3rem
+
+.detailed-score-item
+  display: flex
+  flex-direction: row
+  align-items: center
+
+.detailed-score-item-icon
+  margin-right: 1rem
+
+.detailed-score-item-category
+  font-weight: $fw-bold
+
+.detailed-score-item-score
+  p
+    font-weight: $fw-exBold
+  span
+    font-weight: $fw-medium
+    color: $light-lavender
+
+@media (min-width: 1440px)
+  #root
+    flex-direction: row
+    margin-top: 20%
+  .result-wrapper
+    width: 300px
+    height: 380px
+    margin: 0
+    border-radius: 30px
+  .description-wrapper
+    margin: 0 13%
+  .detailed-wrapper
+    width: 300px
+    padding: 2rem 0
+    // border: 1px solid $light-lavender
+    margin: 1rem
+    h2
+      margin-bottom: 1rem
+    button
+      padding: 0.8rem 1rem
+      margin: 0 1rem
+  .detailed-score-item-wrapper
+    margin-bottom: 2rem
